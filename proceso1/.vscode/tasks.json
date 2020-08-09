@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Proceso1 Normal",
+            "type": "shell",
+            "command": "./exec",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Proceso1 Valgrind",
+            "type": "shell",
+            "command": "./vexec",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

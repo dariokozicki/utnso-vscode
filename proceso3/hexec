@@ -1,0 +1,6 @@
+#!/bin/bash
+FILE=proceso3
+make $FILE
+if test -f "./$FILE"; then
+    valgrind --tool=helgrind ./$FILE
+fi
