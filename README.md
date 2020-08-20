@@ -11,7 +11,7 @@
 - - [VSCode](https://code.visualstudio.com/) (por defecto ya viene en la VM)
 - - La extensión [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) de VSC
 - - La [commons library de la cátedra](https://github.com/sisoputnfrba/so-commons-library)
-- - (Altamente recomendado) [CUnit](https://mysnippets443.wordpress.com/2015/03/07/ubuntu-install-cunit/) para no desvelarse retesteando a mano el dia anterior a la entrega :smiley_face:
+- - (Altamente recomendado) [CUnit](https://mysnippets443.wordpress.com/2015/03/07/ubuntu-install-cunit/) para no desvelarse retesteando a mano el dia anterior a la entrega :smile:
 - - GNOME Terminal (__sudo apt-get install gnome-terminal__)
 - Hacerse un buen cafecito antes de empezar
 
@@ -291,7 +291,7 @@ Se nos abre un tasks.json donde vamos a poder decirle a VSCode qué queremos hac
         ]
     }
 
-Ahora, podemos ir a **Tareas->Ejecutar Tarea->Proceso1 Normal->(gcc)** para ejecutarlo directo desde el IDE, o Proceso1 Valgrind para ejecutarlo con Valgrind! Ah y **se compila automáticamente cada vez que lo corrés** :smiley_face:
+Ahora, podemos ir a **Tareas->Ejecutar Tarea->Proceso1 Normal->(gcc)** para ejecutarlo directo desde el IDE, o Proceso1 Valgrind para ejecutarlo con Valgrind! Ah y **se compila automáticamente cada vez que lo corrés** :smile:
 
 >*Qué fiaca. son como 3 clicks.*
 
@@ -320,9 +320,11 @@ Podés hacer esto mismo con el resto de los procesos y decirle a tus compañeros
 
 ## Parte 5: Testeo Unitario y el retorno de PdeP
 
->*Nooooooo! Antes muerto que hacer un assert!*
+>*Seré honesto contigo Lisa, jamás hice las pruebas.*
 
-Te soy honesto. Nadie te lo va a pedir. Nadie se lo va a esperar cuando caigas a la entrega con tests unitarios. 
+[![Lisa interactuando con el equipo de QA](https://i.ytimg.com/vi/c3MaSmykVC8/hqdefault.jpg)](https://www.youtube.com/watch?v=c3MaSmykVC8 "Seré honesto contigo Lisa, jamás hice las pruebas")
+
+Nadie te lo va a pedir. Nadie se lo va a esperar cuando caigas a la entrega con tests unitarios. 
 
 No lo hagas por la nota. Hacelo porque realmente te vas a ahorrar tiempo, frustración y noches de desvelo tratando de encontrar errores.
 
@@ -378,7 +380,7 @@ Creamos un nuevo archivo "tests.c" y "tests.h" en src e include, que nos quedar�
     }
 
 
-De esta forma podemos correr **./proceso1 -test** para correr nuestros tests. [**Te recomiendo empezar testeando que se serialicen / deserialicen bien tus mensajes**](https://docs.google.com/document/d/190LLBTzHkFmD_yS8OWcUsJoIOQVKxJkUxIFtcnChr-g/edit) :smiley_face:
+De esta forma podemos correr **./proceso1 -test** para correr nuestros tests. [**Te recomiendo empezar testeando que se serialicen / deserialicen bien tus mensajes**](https://docs.google.com/document/d/190LLBTzHkFmD_yS8OWcUsJoIOQVKxJkUxIFtcnChr-g/edit) :smile:
 
 De la misma forma, podemos ir a nuestro __launch.json__ y en __args__ agregar "-test" para correr nuestros tests en debug. También podemos crear tareas como en las ejecuciones normales y agregarle shortcuts. Lo que te haga feliz.
 
@@ -398,6 +400,9 @@ De la misma forma, podemos ir a nuestro __launch.json__ y en __args__ agregar "-
                 asserts    1      1      1      0      n/a
 
 ## Parte 6: Deployment para entrega final
+
+>### Tu cara cuando ande en la VM pero no en la entrega
+>![](https://pics.me.me/thumb_los-ping%C3%BCinos-de-madagascar-meme-58919278.png)
 
 Seguro te dijeron que tenés 15 minutos para setear el proyecto en la entrega. Lo que probablemente no sepas (o te acuerdes) en la entrega es que tenés que **instalar la commons y todo lo que uses en la máquina donde entregás!** Y probablemente sean varias VMs conectadas por LAN, así que se te pueden ir los tiempos por este detalle. Te va a ser más fácil automatizar esto. Adapté un script de [acá](https://github.com/sisoputnfrba/so-deploy) para que sea más fácil de usar. Vamos a ir a la carpeta del TP y creamos:
 
