@@ -228,7 +228,7 @@ Dentro de /.vscode/, creamos el archivo **c_cpp_properties.json** con el siguien
                     "../shared/include"
                 ],
                 "defines": ["_GNU_SOURCE"],
-                "intelliSenseMode": "clang-x64",
+                "intelliSenseMode": "clang-x86",
                 "browse": {
                     "path": [
                         "${workspaceFolder}",
