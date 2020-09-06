@@ -9,6 +9,7 @@
             "name": "Proceso3",
             "type": "cppdbg",
             "request": "launch",
+            "preLaunchTask": "Make",
             "program": "${workspaceFolder}/proceso3",
             "args": [],
             "stopAtEntry": false,

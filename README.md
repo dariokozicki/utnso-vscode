@@ -264,7 +264,7 @@ Vamos a la parte de __Debug__ de VSC (bichito a la izquierda en el IDE), y arrib
 
 Se nos va a abrir launch.json en /.vscode/ . Vamos a cambiar *(gdb) Launch* en __name__ por *Proceso1*, y lo de __program__ por *${workspaceFolder}/proceso1*   
 
-Ahora ya podemos Debuggear nuestro proyecto! Si vas al bichito nuevamente y seleccionas *Proceso1*, apretando en el triángulo verde o f5 vas a poder debuggear. Podés poner breakpoints para ver lo que se imprime por consola y demás. Tené en cuenta que debuggear **no compila tu aplicación, así que lo vas a tener que hacer manualmente**
+Ahora ya podemos Debuggear nuestro proyecto! Si vas al bichito nuevamente y seleccionas *Proceso1*, apretando en el triángulo verde o f5 vas a poder debuggear. Podés poner breakpoints para ver lo que se imprime por consola y demás. Tené en cuenta que debuggear **no compila tu aplicación, así que lo vas a tener que hacer manualmente**. Despues del proximo paso vamos a ver como arreglar eso
 
 Ahora te toca repetir esto mismo con los cuatro procesos. De esta forma vas a poder debuggear cualquiera de los cuatro.
 
@@ -273,11 +273,19 @@ Pero eso no es todo...
 
 Vamos a ir a Tareas-> Configurar Tareas->Crear archivo tasks.json desde plantilla (*proceso1*)->Others
 
-Se nos abre un tasks.json donde vamos a poder decirle a VSCode qué queremos hacer. Vamos a agregar dos tareas: una para ejecutar normal y otra para valgrind (3 si querés hacer para helgrind). Reemplazamos los labels por el nombre de cada tarea, shell se queda igual, y en command vamos a poner ./exec o ./vexec respectivamente. Nos queda algo así:
+Se nos abre un tasks.json donde vamos a poder decirle a VSCode qué queremos hacer. Vamos a agregar tres tareas: una para compilar, una para ejecutar normal y otra para valgrind (4 si querés hacer para helgrind). Reemplazamos los labels por el nombre de cada tarea, shell se queda igual, y en command vamos a poner ./exec o ./vexec respectivamente. Nos queda algo así:
 
     {
         "version": "2.0.0",
         "tasks": [
+            {
+                "label": "Make",
+                "type": "shell",
+                "command": "make",
+                "problemMatcher": [
+                    "$gcc"
+                ]
+            },
             {
                 "label": "Proceso1 Normal",
                 "type": "shell",
@@ -317,6 +325,10 @@ En vez de ctrl+h y ctrl+j ponés tu combinación favorita. Command se queda como
 Pumba! Ahora con una combinación de teclas podemos ejecutar el proceso las veces que queramos, desde el IDE. No más terminal, no más Eclipse, todos felices. 
 
 Podés hacer esto mismo con el resto de los procesos y decirle a tus compañeros que se hagan sus propios keybinds (ya que es probable que una persona se dedique a un sólo proceso en el TP)
+
+Ahora tambien podemos hacer que se ejecute la tarea de compilacion que creamos cuando empezamos a debuggear. Abrimos para todos los procesos el archivo launch.json y agregamos esta linea:
+
+            "preLaunchTask": "Make",
 
 ## Parte 5: Testeo Unitario y el retorno de PdeP
 
