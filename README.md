@@ -8,7 +8,7 @@
 
 ## Requisitos:
 - Tener instalado:
-- - [VSCode](https://code.visualstudio.com/) (por defecto ya viene en la VM)
+- - El editor [VSCode](https://code.visualstudio.com/). Viene en la VM pero se recomienda actualizar a [la ultima version son soporte a 32bit](https://code.visualstudio.com/updates/v1_35)
 - - La extensión [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) de VSC
 - - La [commons library de la cátedra](https://github.com/sisoputnfrba/so-commons-library)
 - - (Altamente recomendado) [CUnit](https://mysnippets443.wordpress.com/2015/03/07/ubuntu-install-cunit/) para no desvelarse retesteando a mano el dia anterior a la entrega :smile:
