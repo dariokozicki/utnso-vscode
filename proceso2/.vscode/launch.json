@@ -9,6 +9,7 @@
             "name": "Proceso2",
             "type": "cppdbg",
             "request": "launch",
+            "preLaunchTask": "Make",
             "program": "${workspaceFolder}/proceso2",
             "args": [],
             "stopAtEntry": false,
